@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'glober';
+    src: url('./Fontfabric - GloberRegular.otf');
+}
+@font-face {
+    font-family: 'globerl';
+    src: url('./Fontfabric\ -\ GloberLight.otf');
+}
+$verde1: #0e6e0f;
+$verde2: #0e720f;
+
+.content {
+    max-width: 100vw;
+    width: 1000px;
+    margin-inline: auto;
+}
