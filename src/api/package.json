@@ -1,0 +1,16 @@
+{
+  "name": "pocketbasecustomapi",
+  "version": "1.0.0",
+  "description": "Simplesmente um node wrapper para o programa pocketbase com o objetivo de fazer deploy na vercel e potencialmente em qualquer servidor node. Seu destaque em desenvolvimento e preço são surreais, estou montando minha stack e pode ser que esse pkg faça parte",
+  "main": "index.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "íGlauco",
+  "license": "ISC",
+  "dependencies": {
+    "cross-fetch": "^4.0.0",
+    "exec": "^0.2.1",
+    "express": "^4.18.2"
+  }
+}
