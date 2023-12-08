@@ -2,7 +2,7 @@
   "name": "icarus",
   "description": "The default Marko starter app",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "marko": "^5.31.17",
     "pocketbase": "^0.19.0"
@@ -14,7 +14,7 @@
   "private": true,
   "scripts": {
     "dev": "marko-run",
-    "build": "marko-run build && cp -r ./src/api ./dist/",
+    "build": "marko-run build && ssr-to-html --out ./dist -- node dist/index.mjs && cp -r ./src/api ./dist/",
     "preview": "marko-run preview",
     "start": "node --enable-source-maps ./dist/index.mjs"
   }
