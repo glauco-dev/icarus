@@ -1,0 +1,60 @@
+import {links} from '../config.js'
+
+class { 
+    sublinkGo(p, event){
+        console.log(p, event);   
+    }
+}
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+            <img src="" alt="" id="logo">
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <for|link, index| of=links>
+                <li key=link.path+index>
+                    <if(link.links && !link.path)>
+                        <a class='dropdown-trigger' href='#' data-target='dropdown-'+link.label>
+                            ${link.label}
+                        </a>
+
+                            <ul id='dropdown-'+link.label class='dropdown-content'>
+                                <for|sublink,index| of=link.links>
+                                    <li key='sublink'+index>
+                                        <a href=sublink.path>
+                                            ${sublink.label}
+                                        </a>
+                                    </li>
+                                </for>
+                            </ul>
+
+                    </if>
+                    <else>
+                        <a href=link.path>
+                            ${link.label}
+                        </a>
+                    </else>
+                </li>
+            </for>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="">Sass</a></li>
+    <li><a href="">Components</a></li>
+    <li><a href="">JavaScript</a></li>
+  </ul>
+
+style.scss {
+    @import '../config.scss';
+    nav {
+        position: absolute;
+        background-color: $verde1;
+    }
+    .dropdown-content{
+        width: 200px !important;
+        top: 4.5em !important;
+    }
+}
