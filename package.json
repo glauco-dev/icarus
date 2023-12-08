@@ -13,7 +13,7 @@
   "private": true,
   "scripts": {
     "dev": "marko-run",
-    "build": "marko-run build",
+    "build": "marko-run build && cp -r ./src/api ./dist/",
     "preview": "marko-run preview",
     "start": "node --enable-source-maps ./dist/index.mjs"
   }
