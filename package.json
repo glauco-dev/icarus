@@ -9,12 +9,13 @@
   },
   "devDependencies": {
     "@marko/run": "^0.3.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "ssr-to-html": "^1.2.0"
   },
   "private": true,
   "scripts": {
     "dev": "marko-run",
-    "build": "marko-run build && ssr-to-html --out ./dist -- node dist/index.mjs && cp -r ./src/api ./dist/",
+    "build": "marko-run build && npx ssr-to-html --out ./dist -- node dist/index.mjs && cp -r ./src/api ./dist/",
     "preview": "marko-run preview",
     "start": "node --enable-source-maps ./dist/index.mjs"
   }
