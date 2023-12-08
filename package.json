@@ -15,6 +15,11 @@
   "private": true,
   "scripts": {
     "dev": "marko-run",
+    "browsersup" : "ssr-to-html --out ./dist -- node dist/index.mjs",
+    "pocketBaseServe" : "./dist/api/pocketbase.exe serve",
+    "copyApiFolder": "cp -r ./src/api ./dist/",
+    "vercelBuild": "vercel build",
+    "vercelDev": "vercel dev",
     "build": "marko-run build && npx ssr-to-html --out ./dist -- node dist/index.mjs && cp -r ./src/api ./dist/",
     "preview": "marko-run preview",
     "start": "node --enable-source-maps ./dist/index.mjs"
