@@ -1,6 +1,6 @@
 {
   "name": "icarus",
-  "description": "The default Marko starter app",
+  "description": "The default production template",
   "version": "1.0.0",
   "type": "commonjs",
   "dependencies": {
