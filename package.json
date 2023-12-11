@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "commonjs",
   "dependencies": {
+    "@marko-tags/context": "^2.2.2",
     "marko": "^5.31.17",
     "pocketbase": "^0.19.0"
   },
@@ -15,8 +16,8 @@
   "private": true,
   "scripts": {
     "dev": "marko-run",
-    "browsersup" : "ssr-to-html --out ./dist -- node dist/index.mjs",
-    "pocketBaseServe" : "./dist/api/pocketbase.exe serve",
+    "browsersup": "ssr-to-html --out ./dist -- node dist/index.mjs",
+    "pocketBaseServe": "./dist/api/pocketbase.exe serve",
     "copyApiFolder": "cp -r ./src/api ./dist/",
     "vercelBuild": "vercel build",
     "vercelDev": "vercel dev",
